@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'MADE\ Soulmaze\ Outline\ PERSONAL';
+    src: url('../Fonts/MADE\ Soulmaze\ Outline\ PERSONAL\ USE.otf');
+  }
+  
+  h1,
+  h2,
+  h3 {
+    font-family: 'MADE\ Soulmaze\ Outline\ PERSONAL';
+ 
+  }
+@font-face {
+    font-family: 'MADE\ Soulmaze\ PERSONAL';
+    src: url('../Fonts/MADE\ Soulmaze\ PERSONAL\ USE.otf');
+  }
+  
+  p {
+    font-family: 'MADE\ Soulmaze\ PERSONAL';
+    font-size: 19px;
+    font-weight: 400;
+    color: #ff0000;
+  }
+  
+
+
+
+
+.main{
+    background-image: url('../Images/file.gif');
+    min-height: 115vh;
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: darken;
+   
+}
+.logo{
+    max-width: 100%;
+}
+
+.icon{
+    font-size: 35px;
+    color: white;
+}
+.heading{
+    max-width: 100%;
+}
+.sec1{
+    margin-top: 250px;
+}
+.crypto{
+    font-size: 80px;
+    margin-top: 300px;
+    
+    color: white;
+}
+.btn1{
+    font-family: 'MADE\ Soulmaze\ PERSONAL' !important;
+    font-size: 16px;
+    background-color: #ee0604;
+    color: white;
+    border: none;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+.btn1:hover{
+    background-color: transparent;
+}
+.ico{
+    max-width: 100%;
+}
+.obj{
+    max-width: 100%;
+    margin-top: -450px;
+  
+}
+.line{
+    background-color: white;
+    width: 100%;
+}
+.line1{
+    
+        border:none;
+        border-top:2px dashed white;
+        color:#fff;
+       
+        height:1px;
+        width:50%;
+    
+}
+@media only screen and (max-width: 600px) {
+  .icon{
+      font-size: 30px;
+      padding: 5px;
+  }
+  }
+  @media only screen and (max-width: 600px) {
+    .ico{
+      
+        padding-left: 85px;
+    }
+    }
+    @media only screen and (max-width: 600px) {
+        .crypto{
+            font-size: 35px;
+            margin-top: 300px;
+            
+            color: white;
+        }
+        }
+        @media only screen and (max-width: 600px) {
+           .obj{
+               margin-top: -235px;
+
+           }
+            }
