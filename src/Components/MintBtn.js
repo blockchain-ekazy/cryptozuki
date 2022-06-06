@@ -13,8 +13,8 @@ import "./MintBtn.css";
 
 export default function Home() {
   const REACT_APP_CONTRACT_ADDRESS =
-    "0x8AD1Dd2Ea37029731F32b7B4C1F5572b17F6a5A5";
-  const SELECTEDNETWORK = "4";
+    "0x7db0fBb6e06a7a6A49c3506ac829468661F527bE";
+  const SELECTEDNETWORK = "1";
   const SELECTEDNETWORKNAME = "Ethereum";
 
   const [quantity, setQuantity] = useState(1);
@@ -43,14 +43,14 @@ export default function Home() {
     if (!initializeWeb3()) return;
     if (!connectWallet()) return;
 
-    let p = price * quantity;
-    if ((await web3.eth.getBalance(metamaskAddress)) < p) {
-      toast.error("Insufficient Funds!");
-      return;
-    }
-
-    let m = await ct.methods.balanceOf(metamaskAddress).call();
-    
+    // let p = price * quantity;
+    // if ((await web3.eth.getBalance(metamaskAddress)) < p) {
+    //   toast.error("Insufficient Funds!");
+    //   return;
+    // }
+    let p;
+    let m = await ct.methods.numberMinted(metamaskAddress).call();
+    // console.log("fghf");
     if (eval(m + quantity) >= maxallowed) {
       toast.error("Already Minted Maximum Allowed!");
       return;
@@ -58,9 +58,7 @@ export default function Home() {
 
     if (status == 1) {
       await toast.promise(
-        ct.methods
-          .phase1mint(quantity)
-          .send({ from: metamaskAddress, value: p }),
+        ct.methods.freemint(quantity).send({ from: metamaskAddress, value: 0 }),
         {
           pending: "Mint in Progress!!",
           success: "Mint Success!!",
@@ -69,6 +67,10 @@ export default function Home() {
       );
       return;
     } else if (status == 2) {
+      if (m == 0) {
+        p = price * (quantity - 1);
+      } else p = price * quantity;
+
       await toast.promise(
         ct.methods.mint(quantity).send({ from: metamaskAddress, value: p }),
         {
@@ -122,7 +124,7 @@ export default function Home() {
     if (status == 0) {
       toast.error("Sale not Started!");
       return false;
-    } else if (status == 2) {
+    } else if (status == 2 || status == 1) {
       setWalletConnected(true);
     }
   };
