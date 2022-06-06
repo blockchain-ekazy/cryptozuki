@@ -20,9 +20,9 @@ export default function Home() {
           </div>
           <div className="col-2"></div>
           <div className="col-4 text-right">
-            <i class="icon px-3 fa-brands fa-instagram"></i>
-            <i class="icon px-3 fa-brands fa-twitter"></i>
-            <i class="icon px-3 fa-brands fa-discord"></i>
+            <i class="icon mx-3 fa-brands fa-instagram" style={{cursor:"pointer"}}></i>
+            <i class="icon mx-3 fa-brands fa-twitter" style={{cursor:"pointer"}}></i>
+            <i class="icon mx-3 fa-brands fa-discord" style={{cursor:"pointer"}}></i>
             {/* <img className="opensea px-2" src={Img2} /> */}
           </div>
         </div>
@@ -52,13 +52,13 @@ export default function Home() {
                 </div>
               </div> */}
               <div className="row ">
-                <div className="col-10 text-center">
+                <div className="col-10 text-center pb-sm-5 mx-auto mx-sm-0">
                   <MintBtn/>
                   {/* <button className="btn1">Connect</button> */}
                 </div>
-                <div className="col-12 text-left">
+                {/* <div className="col-12 text-left">
                   <img className="ico" src={Img5} />
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-md-5">

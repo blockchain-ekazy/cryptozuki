@@ -49,6 +49,11 @@
 .sec1{
     margin-top: 250px;
 }
+@media only screen and (max-width: 1000px) {
+    .sec1{
+        margin-top: 70px !important;
+    }
+    }
 .crypto{
     font-size: 80px;
     margin-top: 300px;
@@ -107,7 +112,15 @@
     }
     @media only screen and (max-width: 600px) {
         .crypto{
-            font-size: 35px;
+            font-size: 35px !important;
+            margin-top: 300px;
+            
+            color: white;
+        }
+        }
+    @media only screen and (max-width: 1000px) {
+        .crypto{
+            font-size: 42px !important;
             margin-top: 300px;
             
             color: white;
