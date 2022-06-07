@@ -28,10 +28,13 @@ export default function Home() {
             >
               <img className="opensea pr-3 pl-3 mb-3" src={Img2} />
             </a>
+            <a href="https://twitter.com/CryptoZukiNFT" target={"_blank"}>
+
             <i
               class="icon mx-3 fa-brands fa-twitter"
               style={{ cursor: "pointer" }}
             ></i>
+            </a>
             <i
               class="icon mx-3 fa-brands fa-discord"
               style={{ cursor: "pointer" }}
