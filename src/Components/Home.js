@@ -35,10 +35,10 @@ export default function Home() {
               style={{ cursor: "pointer" }}
             ></i>
             </a>
-            <i
+            {/* <i
               class="icon mx-3 fa-brands fa-discord"
               style={{ cursor: "pointer" }}
-            ></i>
+            ></i> */}
           </div>
         </div>
         <hr className="w-100 line" />
