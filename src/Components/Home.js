@@ -8,7 +8,7 @@ import Img4 from "../Images/metamask.png";
 import Img5 from "../Images/c.png";
 import Img6 from "../Images/object.png";
 
-import MintBtn from './MintBtn'
+import MintBtn from "./MintBtn";
 
 export default function Home() {
   return (
@@ -20,16 +20,28 @@ export default function Home() {
           </div>
           <div className="col-2"></div>
           <div className="col-4 text-right">
-            <i class="icon mx-3 fa-brands fa-instagram" style={{cursor:"pointer"}}></i>
-            <i class="icon mx-3 fa-brands fa-twitter" style={{cursor:"pointer"}}></i>
-            <i class="icon mx-3 fa-brands fa-discord" style={{cursor:"pointer"}}></i>
-            {/* <img className="opensea px-2" src={Img2} /> */}
+            {/* <i class="icon mx-3 fa-brands fa-instagram" style={{cursor:"pointer"}}></i> */}
+            <a
+              href="https://opensea.io/collection/crypto-zuki"
+              style={{ cursor: "pointer" }}
+              target={"_blank"}
+            >
+              <img className="opensea pr-3 pl-3 mb-3" src={Img2} />
+            </a>
+            <i
+              class="icon mx-3 fa-brands fa-twitter"
+              style={{ cursor: "pointer" }}
+            ></i>
+            <i
+              class="icon mx-3 fa-brands fa-discord"
+              style={{ cursor: "pointer" }}
+            ></i>
           </div>
         </div>
         <hr className="w-100 line" />
         <hr className="w-100 line1" />
         <div className="container-fluid">
-          <div className="row sec1 align-items-cente" >
+          <div className="row sec1 align-items-cente">
             <div className="col-1"></div>
             <div className="col-md-6 text-left">
               <img className="heading" src={Img3} />
@@ -53,7 +65,7 @@ export default function Home() {
               </div> */}
               <div className="row ">
                 <div className="col-10 text-center pb-sm-5 mx-auto mx-sm-0">
-                  <MintBtn/>
+                  <MintBtn />
                   {/* <button className="btn1">Connect</button> */}
                 </div>
                 {/* <div className="col-12 text-left">
