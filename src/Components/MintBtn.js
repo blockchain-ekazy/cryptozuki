@@ -144,7 +144,7 @@ export default function Home() {
               </small> */}
               <br />
               <small>
-                Price: {status == 2 ? ((price / 10 ** 18) * quantity).toFixed(4) + " ETH": "Free"}
+                Price: First NFT Free then {price} ETH
               </small>
               <br />
               <small>Max per Address: {maxallowed}</small>
