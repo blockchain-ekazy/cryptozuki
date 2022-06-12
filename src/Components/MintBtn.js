@@ -49,9 +49,10 @@ export default function Home() {
     //   return;
     // }
     let p;
-    let m = await ct.methods.numberMinted(metamaskAddress).call();
-    // console.log("fghf");
-    if (eval(m + quantity) >= maxallowed) {
+    let x;
+    x = await ct.methods.numberMinted(metamaskAddress).call();
+
+    if (Number(x) + Number(quantity) >= maxallowed) {
       toast.error("Already Minted Maximum Allowed!");
       return;
     }
@@ -67,7 +68,7 @@ export default function Home() {
       );
       return;
     } else if (status == 2) {
-      if (m == 0) {
+      if (Number(x) == 0) {
         p = price * (quantity - 1);
       } else p = price * quantity;
 
@@ -144,7 +145,10 @@ export default function Home() {
               </small> */}
               <br />
               <small>
-                Price: {status == 2 ? ((price / 10 ** 18) * quantity).toFixed(4) + " ETH": "Free"}
+                Price:{" "}
+                {status == 2
+                  ? ((price / 10 ** 18) * quantity).toFixed(4) + " ETH + GAS"
+                  : "Free + GAS"}
               </small>
               <br />
               <small>Max per Address: {maxallowed}</small>
